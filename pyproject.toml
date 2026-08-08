@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tmpl"
+version = "0.1.0"
+description = "Scaffold a new project's directory structure and files from a Jinja2-based template."
+requires-python = ">=3.11"
+dependencies = [
+    "jinja2>=3.1",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+tmpl = "tmpl.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
