@@ -2,7 +2,7 @@
 
 `~/share/tmpl/[種類]` に配置したJinja2ベースのテンプレートディレクトリから、新規プロジェクトの初期ディレクトリ構成・ファイルを生成するCLIツール。
 
-詳細な要件・設計は [requirement.md](requirement.md) / [spec.md](spec.md) を参照。
+詳細な要件・設計は [requirement.md](docs/requirement.md) / [spec.md](docs/spec.md) を参照。
 
 ## インストール
 
@@ -31,7 +31,7 @@ tmpl python-cli myapp author=alice -o ./projects/myapp
 - `--dry-run`: 実際には書き込まず、展開されるパスのみを表示する
 - `変数名=値`: テンプレート内で `{{ 変数名 }}` として参照できる任意の変数を指定する（ファイル内容・ファイル名・ディレクトリ名のいずれにも使用可能）
 
-テンプレートディレクトリ内の `.git`, `__pycache__`, `.DS_Store` 等は展開対象から除外される（詳細は [spec.md](spec.md) の除外パターン参照）。
+テンプレートディレクトリ内の `.git`, `__pycache__`, `.DS_Store` 等は展開対象から除外される（詳細は [spec.md](docs/spec.md) の除外パターン参照）。
 
 ## テスト
 
